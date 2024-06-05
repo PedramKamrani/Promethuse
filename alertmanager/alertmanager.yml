@@ -1,0 +1,8 @@
+route:
+ receiver: 'discord-webhook'
+
+receivers:
+  - name: 'discord-webhook' 
+    discord_confige:
+      - webhook_url: 'http..'
+        send_resolved: true

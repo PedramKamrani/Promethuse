@@ -29,5 +29,19 @@ services:
       - 9090:9090
      volumes:
       - ./Promethes/Prometheus.yml:/etc/Promethes/prometheus.yml:ro
+      - ./Promethes/alert.rule.yml:/etc/Promethes/alert.rule.yml:ro 
+
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: alertmanager
+    volumes:
+     - ./alertmanager:/etc/alertmanager
+    command:
+    - '--config.file=/etc/alertmanager/alertmanager.yml'
+    - '--storage.path=/alertmanager'
+    ports:
+      - 9093:9093
+
+
 
   

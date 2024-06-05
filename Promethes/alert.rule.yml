@@ -1,0 +1,11 @@
+groups:
+  - name: 'ManyRequestThreshold'
+    rule:
+     - alert: 'ManyRequestThreshold'
+       expr: http_requests_receivd_total > 5
+       #for :1m
+       lables:
+         serevrity: 'critical'
+       annotations:
+         summery: 'High request for {{$lables.method}} in {{$lable.job}} is {{printf "%2f" $value}}%.'
+         description: 'The Request rate foer path {{$lable.path}} w method {{$lable.method}}'

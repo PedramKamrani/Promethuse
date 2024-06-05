@@ -10,12 +10,16 @@
     <DockerServiceName>promethuse</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="alertmanger\**" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
     <None Include="grafana\provisioning\datasources\datasources.yml" />
+    <None Include="promethes\alert.rule.yml" />
     <None Include="promethes\Prometheus.yml" />
   </ItemGroup>
   <ItemGroup>
