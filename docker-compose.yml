@@ -13,13 +13,21 @@ services:
       - 8082:80
       - 8084:443
 
+  grafana:
+    image: grafana/grafana:master
+    container_name: grafana
+    ports:
+      - "3100:3000" 
+    volumes:
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+
   prometheusserver:
      image : prom/prometheus
      container_name : prometheus_grafprom
      restart: always
      ports: 
       - 9090:9090
-     # volumes:
-     #  - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+     volumes:
+      - ./Promethes/Prometheus.yml:/etc/Promethes/prometheus.yml:ro
 
   

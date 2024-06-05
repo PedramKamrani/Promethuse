@@ -15,6 +15,7 @@
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+    <None Include="grafana\provisioning\datasources\datasources.yml" />
     <None Include="promethes\Prometheus.yml" />
   </ItemGroup>
   <ItemGroup>
