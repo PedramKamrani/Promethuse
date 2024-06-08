@@ -9,7 +9,7 @@ globle:
    - targets:
      - host.docker.internal:8082
   rule_files:
-    - /etc/Promethes/alert.rule.yml
+     - /etc/Promethes/alert.rule.yml
 alerting:
  alertmanagers:
    - static_configs:

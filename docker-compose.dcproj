@@ -13,6 +13,7 @@
     <None Remove="alertmanger\**" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="alertmanager\alertmanager.yml" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>
